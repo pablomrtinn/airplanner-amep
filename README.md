@@ -53,7 +53,3 @@ El proyecto utiliza un módulo de conexión a base de datos (`ConnexioBD.cpp` / 
 
 - La aplicación es principalmente una solución de escritorio para la gestión de aerolíneas y reservas.
 - Si necesitas adaptar rutas o dependencias, revisa el archivo `AirPlanner.vcxproj`.
-
-## Licencia
-
-No se ha especificado una licencia en el repositorio. Añade un archivo `LICENSE` si quieres definir una licencia clara para el proyecto.
