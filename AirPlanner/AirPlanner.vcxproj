@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{68ac4184-53f7-43ae-a95f-a16284fe0126}</ProjectGuid>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <Keyword>ManagedCProj</Keyword>
+    <RootNamespace>AirPlanner</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Program Files\MySQL\mysql-connector-c++-9.1.0-winx64\include\jdbc;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>mysqlcppconn.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>main</EntryPointSymbol>
+      <AdditionalLibraryDirectories>C:\Program Files\MySQL\mysql-connector-c++-9.1.0-winx64\lib64\vs14</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies />
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>main</EntryPointSymbol>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies />
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>main</EntryPointSymbol>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS_NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Program Files\MySQL\mysql-connector-c++-9.1.0-winx64\include\jdbc;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>mysqlcppconn.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>main</EntryPointSymbol>
+      <AdditionalLibraryDirectories>C:\Program Files\MySQL\mysql-connector-c++-9.1.0-winx64\lib64\vs14;</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ResourceCompile Include="app.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AirPlannerSingleton.h" />
+    <ClInclude Include="CercadoraAeroport.h" />
+    <ClInclude Include="CercadoraReserva.h" />
+    <ClInclude Include="CtrlModificaAerolinia.h" />
+    <ClInclude Include="CapaDePresentacio.h" />
+    <ClInclude Include="CercadoraAerolinia.h" />
+    <ClInclude Include="CercadoraClient.h" />
+    <ClInclude Include="CercadoraTreballador.h" />
+    <ClInclude Include="CercadoraModelsAvio.h" />
+    <ClInclude Include="CercadoraUsuari.h" />
+    <ClInclude Include="CercadoraVol.h" />
+    <ClInclude Include="ConnexioBD.h" />
+    <ClInclude Include="CtrlModificaReservaVol.h" />
+    <ClInclude Include="CtrlModificaReserva.h" />
+    <ClInclude Include="CtrlModificaSubscripcio.h" />
+    <ClInclude Include="CtrlModificaTreballador.h" />
+    <ClInclude Include="CtrlModificaVol.h" />
+    <ClInclude Include="CtrlReservarVol.h" />
+    <ClInclude Include="CercadoraPeticions.h" />
+    <ClInclude Include="CtrlModificaAeroport.h" />
+    <ClInclude Include="DTOAerolinia.h" />
+    <ClInclude Include="CtrlModificaClient.h" />
+    <ClInclude Include="DTOAeroport.h" />
+    <ClInclude Include="DTOClient.h" />
+    <ClInclude Include="DTOEstatPeticions.h" />
+    <ClInclude Include="DTOPeticions.h" />
+    <ClInclude Include="DTOVol.h" />
+    <ClInclude Include="DTOInfoVol.h" />
+    <ClInclude Include="DTOReservesClient.h" />
+    <ClInclude Include="Form1.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormAdministradorIniciat.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormAeroliniaIniciada.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormAeroportIniciat.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormCodi.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormCorreuOlvidaContrasenya.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormCtrlModificaSubscripcio.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormModificaAeroport1.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormModificaReservaVol.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormModificarReserva.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormConsultarAerolinia.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormConsultarAeroport.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormConsultarReservesVol.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormModificaTreballador.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormModificaVol.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormConsultarTreballadorsAeroport.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormEsborraVol.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormEsborraTreballador.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormNovaContrasenyaOlvidaContrasenya.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormNumeroReserves.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormRegistrarClient.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormReservarPerClient.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormEstatPeticions.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormPeticions.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormCrearPeticio.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormBuscarVols.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormConsultaVolsAerolinia.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormConsultaVolsAeroport.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormEsborraAerolinia.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormEsborraAeroport.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormModificarAerolinia.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormBuscarVolPerAEstat.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormConsultarEstatVol.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormConsultarInfoVol.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormRegistrarAerolinia.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormReservarVol.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormRegistrarTreballador1.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormSubscripcioAvis.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormTreballadorIniciat.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormConsultaVolsReservatsClient.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormMotiu.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Launcher.h" />
+    <ClInclude Include="MenuInicial.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="PassarelaAerolinia.h" />
+    <ClInclude Include="FormSenseSessio.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormSessioIniciada.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormEsborraUsuari.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MyForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormConsultaClient.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormRegistrarAeroport.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="PassarelaAeroport.h" />
+    <ClInclude Include="FormIniciaSessio.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="TxCancelarReserva.h" />
+    <ClInclude Include="TxConsultaReservesVol.h" />
+    <ClInclude Include="TxConsultaVolsReservatsClient.h" />
+    <ClInclude Include="PassarelaModelsAvio.h" />
+    <ClInclude Include="PassarelaReserva.h" />
+    <ClInclude Include="PassarelaPeticions.h" />
+    <ClInclude Include="PassarelaTreballador.h" />
+    <ClInclude Include="PassarelaVol.h" />
+    <ClInclude Include="TxConsultarTreballadorsAeroport.h" />
+    <ClInclude Include="TxEsborraTreballador.h" />
+    <ClInclude Include="TxAprovarPeticio.h" />
+    <ClInclude Include="TxConsultarEstatPeticions.h" />
+    <ClInclude Include="TxConsultarPeticions.h" />
+    <ClInclude Include="TxDenegarPeticio.h" />
+    <ClInclude Include="TxCrearPeticioVol.h" />
+    <ClInclude Include="TxBuscarVols.h" />
+    <ClInclude Include="TxConsultaVolsAerolinia.h" />
+    <ClInclude Include="TxConsultaAerolinia.h" />
+    <ClInclude Include="TxConsultaAeroport.h" />
+    <ClInclude Include="TxConsultaVolsAeroport.h" />
+    <ClInclude Include="TxEsborraAerolinia.h" />
+    <ClInclude Include="TxEsborraAeroport.h" />
+    <ClInclude Include="TxConsultarInfoVol.h" />
+    <ClInclude Include="TxEsborraUsuari.h" />
+    <ClInclude Include="TxEsborraVol.h" />
+    <ClInclude Include="TxIniciSessio.h" />
+    <ClInclude Include="PassarelaClient.h" />
+    <ClInclude Include="PassarelaUsuari.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="TxOblitContrasenya.h" />
+    <ClInclude Include="TxObteFiltresBuscaVols.h" />
+    <ClInclude Include="TxModificarEstatVol.h" />
+    <ClInclude Include="TxRegistrarAerolinia.h" />
+    <ClInclude Include="txConsultaClient.h" />
+    <ClInclude Include="TxRegistrarAeroport.h" />
+    <ClInclude Include="TxRegistrarClient.h" />
+    <ClInclude Include="TxRegistrarTreballador.h" />
+    <ClInclude Include="TxTancarSessio.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AirPlannerSingleton.cpp" />
+    <ClCompile Include="CercadoraAeroport.cpp" />
+    <ClCompile Include="CercadoraReserva.cpp" />
+    <ClCompile Include="CtrlModificaAerolinia.cpp" />
+    <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="CapaDePresentacio.cpp" />
+    <ClCompile Include="CercadoraAerolinia.cpp" />
+    <ClCompile Include="CercadoraClient.cpp" />
+    <ClCompile Include="CercadoraTreballador.cpp" />
+    <ClCompile Include="CercadoraModelsAvio.cpp" />
+    <ClCompile Include="CercadoraUsuari.cpp" />
+    <ClCompile Include="CercadoraVol.cpp" />
+    <ClCompile Include="ConnexioBD.cpp" />
+    <ClCompile Include="CercadoraPeticions.cpp" />
+    <ClCompile Include="CppCLR_WinFormsProject.cpp" />
+    <ClCompile Include="CtrlModificaReservaVol.cpp" />
+    <ClCompile Include="CtrlModificaReserva.cpp" />
+    <ClCompile Include="CtrlModificaSubscripcio.cpp" />
+    <ClCompile Include="CtrlModificaTreballador.cpp" />
+    <ClCompile Include="CtrlModificaVol.cpp" />
+    <ClCompile Include="CtrlReservarVol.cpp" />
+    <ClCompile Include="CtrlModificaAeroport.cpp" />
+    <ClCompile Include="DTOAerolinia.cpp" />
+    <ClCompile Include="DTOEstatPeticions.cpp" />
+    <ClCompile Include="DTOPeticions.cpp" />
+    <ClCompile Include="FormCodi.cpp" />
+    <ClCompile Include="FormCorreuOlvidaContrasenya.cpp" />
+    <ClCompile Include="FormCtrlModificaSubscripcio.cpp" />
+    <ClCompile Include="FormModificaAeroport1.cpp" />
+    <ClCompile Include="FormNovaContrasenyaOlvidaContrasenya.cpp" />
+    <ClCompile Include="FormConsultarAerolinia.cpp" />
+    <ClCompile Include="FormConsultarAeroport.cpp" />
+    <ClCompile Include="FormConsultarReservesVol.cpp" />
+    <ClCompile Include="FormEstatPeticions.cpp" />
+    <ClCompile Include="FormModificarReserva.cpp" />
+    <ClCompile Include="FormModificaReservaVol.cpp" />
+    <ClCompile Include="FormPeticions.cpp" />
+    <ClCompile Include="DTOVol.cpp" />
+    <ClCompile Include="FormConsultaVolsAerolinia.cpp" />
+    <ClCompile Include="DTOAeroport.cpp" />
+    <ClCompile Include="DTOReservesClient.cpp" />
+    <ClCompile Include="FormConsultaVolsAeroport.cpp" />
+    <ClCompile Include="FormEsborraAerolinia.cpp" />
+    <ClCompile Include="FormEsborraAeroport.cpp" />
+    <ClCompile Include="FormModificarAerolinia.cpp" />
+    <ClCompile Include="DTOInfoVol.cpp" />
+    <ClCompile Include="FormAdministradorIniciat.cpp" />
+    <ClCompile Include="FormAeroliniaIniciada.cpp" />
+    <ClCompile Include="FormAeroportIniciat.cpp" />
+    <ClCompile Include="FormModificaTreballador.cpp" />
+    <ClCompile Include="FormModificaVol.cpp" />
+    <ClCompile Include="FormConsultarTreballadorsAeroport.cpp" />
+    <ClCompile Include="FormEsborraVol.cpp" />
+    <ClCompile Include="FormEsborraTreballador.cpp" />
+    <ClCompile Include="FormNumeroReserves.cpp" />
+    <ClCompile Include="FormRegistrarClient.cpp" />
+    <ClCompile Include="FormReservarPerClient.cpp" />
+    <ClCompile Include="FormReservarVol.cpp" />
+    <ClCompile Include="FormCrearPeticio.cpp" />
+    <ClCompile Include="FormBuscarVols.cpp" />
+    <ClCompile Include="FormBuscarVolPerAEstat.cpp" />
+    <ClCompile Include="FormConsultarEstatVol.cpp" />
+    <ClCompile Include="FormConsultaVolsReservatsClient.cpp" />
+    <ClCompile Include="FormConsultarInfoVol.cpp" />
+    <ClCompile Include="FormRegistrarAerolinia.cpp" />
+    <ClCompile Include="FormRegistrarTreballador1.cpp" />
+    <ClCompile Include="FormSubscripcioAvis.cpp" />
+    <ClCompile Include="FormTreballadorIniciat.cpp" />
+    <ClCompile Include="FormMotiu.cpp" />
+    <ClCompile Include="Launcher.cpp" />
+    <ClCompile Include="MenuInicial.cpp" />
+    <ClCompile Include="PassarelaAerolinia.cpp" />
+    <ClCompile Include="CtrlModificaClient.cpp" />
+    <ClCompile Include="DTOClient.cpp" />
+    <ClCompile Include="Form1.cpp" />
+    <ClCompile Include="FormSenseSessio.cpp" />
+    <ClCompile Include="FormSessioIniciada.cpp" />
+    <ClCompile Include="FormEsborraUsuari.cpp" />
+    <ClCompile Include="MyForm.cpp" />
+    <ClCompile Include="FormConsultaClient.cpp" />
+    <ClCompile Include="FormRegistrarAeroport.cpp" />
+    <ClCompile Include="PassarelaAeroport.cpp" />
+    <ClCompile Include="FormIniciaSessio.cpp" />
+    <ClCompile Include="TxCancelarReserva.cpp" />
+    <ClCompile Include="TxConsultaReservesVol.cpp" />
+    <ClCompile Include="TxConsultaVolsReservatsClient.cpp" />
+    <ClCompile Include="PassarelaModelsAvio.cpp" />
+    <ClCompile Include="PassarelaReserva.cpp" />
+    <ClCompile Include="PassarelaPeticions.cpp" />
+    <ClCompile Include="PassarelaTreballador.cpp" />
+    <ClCompile Include="PassarelaVol.cpp" />
+    <ClCompile Include="TxConsultarTreballadorsAeroport.cpp" />
+    <ClCompile Include="TxEsborraTreballador.cpp" />
+    <ClCompile Include="TxAprovarPeticio.cpp" />
+    <ClCompile Include="TxConsultarEstatPeticions.cpp" />
+    <ClCompile Include="TxConsultarPeticions.cpp" />
+    <ClCompile Include="TxDenegarPeticio.cpp" />
+    <ClCompile Include="TxCrearPeticioVol.cpp" />
+    <ClCompile Include="TxBuscarVols.cpp" />
+    <ClCompile Include="TxConsultaVolsAerolinia.cpp" />
+    <ClCompile Include="TxConsultaAerolinia.cpp" />
+    <ClCompile Include="TxConsultaAeroport.cpp" />
+    <ClCompile Include="TxConsultaVolsAeroport.cpp" />
+    <ClCompile Include="TxEsborraAerolinia.cpp" />
+    <ClCompile Include="TxEsborraAeroport.cpp" />
+    <ClCompile Include="TxConsultarInfoVol.cpp" />
+    <ClCompile Include="TxEsborraUsuari.cpp" />
+    <ClCompile Include="TxEsborraVol.cpp" />
+    <ClCompile Include="TxIniciSessio.cpp" />
+    <ClCompile Include="PassarelaClient.cpp" />
+    <ClCompile Include="PassarelaUsuari.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="TxOblitContrasenya.cpp" />
+    <ClCompile Include="TxObteFiltresBuscaVols.cpp" />
+    <ClCompile Include="TxModificarEstatVol.cpp" />
+    <ClCompile Include="TxRegistrarAerolinia.cpp" />
+    <ClCompile Include="txConsultaClient.cpp" />
+    <ClCompile Include="TxRegistrarAeroport.cpp" />
+    <ClCompile Include="TxRegistrarClient.cpp" />
+    <ClCompile Include="TxRegistrarTreballador.cpp" />
+    <ClCompile Include="TxTancarSessio.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="app.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector NET 8.3.0\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SqlXml" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAeroliniaIniciada.ca.resx">
+      <DependentUpon>FormAeroliniaIniciada.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultarAerolinia.resx">
+      <DependentUpon>FormConsultarAerolinia.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultarAeroport.resx">
+      <DependentUpon>FormConsultarAeroport.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultarReservesVol.resx">
+      <DependentUpon>FormConsultarReservesVol.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultaVolsReservatsClient.ca.resx">
+      <DependentUpon>FormConsultaVolsReservatsClient.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCtrlModificaSubscripcio.resx">
+      <DependentUpon>FormCtrlModificaSubscripcio.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModificaAeroport1.resx">
+      <DependentUpon>FormModificaAeroport1.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModificarReserva.resx">
+      <DependentUpon>FormModificarReserva.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModificaTreballador.resx">
+      <DependentUpon>FormModificaTreballador.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModificaVol.resx">
+      <DependentUpon>FormModificaVol.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultarTreballadorsAeroport.resx">
+      <DependentUpon>FormConsultarTreballadorsAeroport.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEsborraVol.resx">
+      <DependentUpon>FormEsborraVol.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEsborraTreballador.resx">
+      <DependentUpon>FormEsborraTreballador.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultaVolsReservatsClient.resx">
+      <DependentUpon>FormConsultaVolsReservatsClient.h</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNumeroReserves.resx">
+      <DependentUpon>FormNumeroReserves.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAeroliniaIniciada.resx">
+      <DependentUpon>FormAeroliniaIniciada.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEstatPeticions.resx">
+      <DependentUpon>FormEstatPeticions.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPeticions.resx">
+      <DependentUpon>FormPeticions.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCrearPeticio.resx">
+      <DependentUpon>FormCrearPeticio.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBuscarVols.resx">
+      <DependentUpon>FormBuscarVols.h</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAeroportIniciat.resx">
+      <DependentUpon>FormAeroportIniciat.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultaVolsAerolinia.resx">
+      <DependentUpon>FormConsultaVolsAerolinia.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAdministradorIniciat.resx">
+      <DependentUpon>FormAdministradorIniciat.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultaVolsAeroport.resx">
+      <DependentUpon>FormConsultaVolsAeroport.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEsborraAerolinia.resx" />
+    <EmbeddedResource Include="FormEsborraAeroport.resx" />
+    <EmbeddedResource Include="FormModificarAerolinia.resx">
+      <DependentUpon>FormModificarAerolinia.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBuscarVolPerAEstat.resx">
+      <DependentUpon>FormBuscarVolPerAEstat.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultarEstatVol.resx">
+      <DependentUpon>FormConsultarEstatVol.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultarInfoVol.resx">
+      <DependentUpon>FormConsultarInfoVol.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRegistrarAerolinia.resx">
+      <DependentUpon>FormRegistrarAerolinia.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRegistrarClient.ca.resx">
+      <DependentUpon>FormRegistrarClient.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRegistrarClient.resx">
+      <DependentUpon>FormRegistrarClient.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReservarPerClient.resx">
+      <DependentUpon>FormReservarPerClient.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReservarVol.resx">
+      <DependentUpon>FormReservarVol.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRegistrarTreballador1.resx">
+      <DependentUpon>FormRegistrarTreballador1.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSenseSessio.resx">
+      <DependentUpon>FormSenseSessio.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSessioIniciada.ca.resx">
+      <DependentUpon>FormSessioIniciada.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSessioIniciada.resx">
+      <DependentUpon>FormSessioIniciada.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEsborraUsuari.resx">
+      <DependentUpon>FormEsborraUsuari.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTreballadorIniciat.resx">
+      <DependentUpon>FormTreballadorIniciat.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuInicial.resx">
+      <DependentUpon>MenuInicial.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm.resx">
+      <DependentUpon>MyForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultaClient.resx">
+      <DependentUpon>FormConsultaClient.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRegistrarAeroport.resx">
+      <DependentUpon>FormRegistrarAeroport.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIniciaSessio.resx">
+      <DependentUpon>FormIniciaSessio.h</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
