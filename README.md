@@ -2,6 +2,9 @@
 
 AirPlanner es una aplicación de escritorio desarrollada en C++/CLI con Windows Forms para gestionar reservas, vuelos, aerolíneas, aeropuertos y usuarios. El proyecto se estructura como una solución de Visual Studio que incluye una interfaz gráfica y lógica de acceso a datos.
 
+> [!IMPORTANT]
+> **Nota de acceso - Igual que el repositorio de PetitFlix:** Actualmente, la ejecución completa y la conexión a la base de datos están restringidas debido a que las **credenciales originales de MariaDB y el acceso al servidor han expirado**. Mantengo este repositorio público para mostrar el código fuente, el diseño arquitectónico y el flujo de trabajo colaborativo seguido durante el desarrollo.
+
 ## Características principales
 
 - Gestión de vuelos, aerolíneas y aeropuertos.
